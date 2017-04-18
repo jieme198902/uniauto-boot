@@ -1,9 +1,13 @@
 package me.uniauto.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import me.uniauto.model.UserModel;
+import me.uniauto.common.BusinessCode;
+import me.uniauto.common.CommResp;
+import me.uniauto.mapper.SysUserMapper;
+import me.uniauto.model.SysUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by wangkuan on 2017/4/14.
@@ -12,13 +16,22 @@ import org.slf4j.LoggerFactory;
 public class UserServiceImpl implements UserService {
     private Logger _logger = LoggerFactory.getLogger(getClass());
 
-    public UserModel login(String name, String password) throws Exception {
-        UserModel userModel = new UserModel();
-        userModel.setAccount(name);
-        userModel.setPassword(password);
+    @Autowired
+    private SysUserMapper sysUserMapper;
 
-        _logger.warn(userModel.toString());
-
-        return userModel;
+    public CommResp<SysUser> login(String name, String password) throws Exception {
+        SysUser ex = new SysUser();
+        ex.setAccount(name);
+        CommResp commResp = new CommResp(BusinessCode.FAIL);
+        SysUser userModel = sysUserMapper.selectOne(ex);
+        if (null == userModel) {
+            commResp.setMessage("用户不存在");
+            return commResp;
+        } else {
+            commResp = new CommResp(BusinessCode.SUCCESS);
+            commResp.setData(userModel);
+        }
+        _logger.warn(commResp.toString());
+        return commResp;
     }
 }

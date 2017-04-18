@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.uniauto.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="me.uniauto.model.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" jdbcType="BIGINT" property="id" />
+    <result column="account_" jdbcType="VARCHAR" property="account" />
+    <result column="password_" jdbcType="VARCHAR" property="password" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="name_pinyin" jdbcType="VARCHAR" property="namePinyin" />
+    <result column="sex_" jdbcType="INTEGER" property="sex" />
+    <result column="avatar_" jdbcType="VARCHAR" property="avatar" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="phone_" jdbcType="VARCHAR" property="phone" />
+    <result column="email_" jdbcType="VARCHAR" property="email" />
+    <result column="birth_day" jdbcType="DATE" property="birthDay" />
+    <result column="dept_id" jdbcType="BIGINT" property="deptId" />
+    <result column="position_" jdbcType="VARCHAR" property="position" />
+    <result column="address_" jdbcType="VARCHAR" property="address" />
+    <result column="staff_no" jdbcType="VARCHAR" property="staffNo" />
+    <result column="locked_" jdbcType="BIT" property="locked" />
+    <result column="enable_" jdbcType="BIT" property="enable" />
+    <result column="remark_" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="BIGINT" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="BIGINT" property="updateBy" />
+  </resultMap>
+</mapper>

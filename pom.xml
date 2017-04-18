@@ -16,6 +16,17 @@
 
     <properties>
         <springboot.version>1.5.2.RELEASE</springboot.version>
+        <mysql.version>5.1.40</mysql.version>
+        <mapper.version>3.3.9</mapper.version>
+        <jdk.version>1.7</jdk.version>
+
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <targetMapperPackage>me.uniauto.dao</targetMapperPackage>
+        <targetModelPackage>me.uniauto.model</targetModelPackage>
+        <!-- XML生成路径 -->
+        <targetResourcesProject>${basedir}/src/main/resources/mapper</targetResourcesProject>
+
+
     </properties>
 
     <dependencyManagement>

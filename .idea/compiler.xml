@@ -14,7 +14,7 @@
     <bytecodeTargetLevel>
       <module name="uniauto-api" target="1.5" />
       <module name="uniauto-boot" target="1.5" />
-      <module name="uniauto-service" target="1.5" />
+      <module name="uniauto-service" target="1.7" />
       <module name="uniauto-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
