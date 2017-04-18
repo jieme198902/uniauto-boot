@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/uniauto-api/uniauto-api.iml" filepath="$PROJECT_DIR$/uniauto-api/uniauto-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uniauto-boot.iml" filepath="$PROJECT_DIR$/uniauto-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uniauto-service/uniauto-service.iml" filepath="$PROJECT_DIR$/uniauto-service/uniauto-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uniauto-web/uniauto-web.iml" filepath="$PROJECT_DIR$/uniauto-web/uniauto-web.iml" />
+    </modules>
+  </component>
+</project>
